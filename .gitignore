@@ -1,0 +1,14 @@
+# Drafts that aren't sanitized yet — keep them out of public history
+_drafts/
+*.draft.md
+
+# Local notes
+NOTES.md
+TODO.md
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
