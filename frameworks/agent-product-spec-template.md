@@ -4,6 +4,32 @@
 
 ---
 
+## How to fill this (don't go in order)
+
+The sections are numbered 1–7 for the reader. They are not the order you fill them in. Fill in this order — anchor first, exit second, scoring third, then the middle.
+
+```mermaid
+flowchart LR
+    S1["1. Job to be Done<br/><i>anchor</i>"] --> S7["7. Sunset Criteria<br/><i>exit</i>"]
+    S7 --> S5["5. Evaluation<br/><i>scoring</i>"]
+    S5 --> S2["2. I/O Contract"]
+    S2 --> S3["3. Decision Boundary"]
+    S3 --> S4["4. Failure Modes"]
+    S4 --> S6["6. Governance<br/><i>last</i>"]
+
+    style S1 fill:#dbeafe,stroke:#1d4ed8,stroke-width:3px,color:#1f2937
+    style S7 fill:#fee2e2,stroke:#dc2626,stroke-width:3px,color:#1f2937
+    style S5 fill:#fef3c7,stroke:#b45309,stroke-width:3px,color:#1f2937
+    style S2 fill:#f3f4f6,stroke:#6b7280,color:#1f2937
+    style S3 fill:#f3f4f6,stroke:#6b7280,color:#1f2937
+    style S4 fill:#f3f4f6,stroke:#6b7280,color:#1f2937
+    style S6 fill:#f3f4f6,stroke:#6b7280,color:#1f2937
+```
+
+*If you can't write Section 1, stop. If you can't write Section 7, you don't yet know why this agent should exist.*
+
+---
+
 ## Identity
 
 - **Agent name:**
@@ -44,6 +70,18 @@
 
 ## Section 3. Decision Boundary
 
+*Every action the agent can take sits in one of three zones. Place each one explicitly. Anything you don't place will default to the most dangerous zone.*
+
+```mermaid
+flowchart LR
+    A["AUTONOMOUS<br/>agent acts alone"] --> B["CONFIRM-THEN-ACT<br/>user must approve"]
+    B --> C["HAND OFF<br/>route to human"]
+
+    style A fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#1f2937
+    style B fill:#fef3c7,stroke:#b45309,stroke-width:2px,color:#1f2937
+    style C fill:#fee2e2,stroke:#dc2626,stroke-width:2px,color:#1f2937
+```
+
 **Autonomous actions** *(no confirmation needed):*
 -
 
@@ -62,6 +100,21 @@
 ---
 
 ## Section 4. Failure Modes & Graceful Degradation
+
+*For every failure mode, you owe the user three things: detection, fallback, and a sentence that tells them what just happened. Silence is the worst failure mode.*
+
+```mermaid
+flowchart LR
+    F[Failure occurs] --> D{Detected?}
+    D -->|no| BAD[User sees<br/>broken output<br/>worst case]
+    D -->|yes| FB[Fallback behavior fires]
+    FB --> MSG[Honest message to user]
+    MSG --> LOG[Logged for review]
+
+    style BAD fill:#fee2e2,stroke:#dc2626,stroke-width:2px,color:#1f2937
+    style MSG fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#1f2937
+    style LOG fill:#dbeafe,stroke:#1d4ed8,color:#1f2937
+```
 
 | Failure mode | Signal that this is happening | Fallback behavior | What the user sees |
 |---|---|---|---|
