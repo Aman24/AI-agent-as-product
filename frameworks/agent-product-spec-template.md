@@ -57,14 +57,25 @@ flowchart LR
 
 ## Section 2. Input/Output Contract
 
-**Input the agent receives:**
--
+*Be concrete. "Natural language" is not an input spec. "A helpful answer" is not an output spec.*
 
-**Output the agent produces (response + structured side effects):**
--
+**Input the agent receives**
 
-**Out of scope** *(inputs the agent should refuse or hand off):*
--
+- Format *(plain text / structured JSON / tool output / multi-modal):*
+- Source *(direct user message / upstream API / event trigger / scheduled run):*
+- Required fields:
+- Optional fields:
+
+**Output the agent produces**
+
+- Response to the user *(format + tone):*
+- Side effects *(systems it writes to, messages it sends, workflows it triggers):*
+- Output schema *(if structured — paste or link to the schema):*
+
+**Out of scope**
+
+- Inputs the agent should refuse *(and the refusal message it uses):*
+- Inputs the agent should hand off *(and to whom):*
 
 ---
 
@@ -82,14 +93,20 @@ flowchart LR
     style C fill:#fee2e2,stroke:#dc2626,stroke-width:2px,color:#1f2937
 ```
 
-**Autonomous actions** *(no confirmation needed):*
--
+**Autonomous actions** *(no confirmation needed)*
 
-**Confirm-then-act actions** *(user must confirm before action):*
--
+- Action:
+- Action:
 
-**Hand-off triggers** *(conditions under which the agent defers to a human):*
--
+**Confirm-then-act actions** *(user must approve before action)*
+
+- Action *(and the exact confirmation prompt the user sees):*
+- Action:
+
+**Hand-off triggers** *(conditions under which the agent defers to a human)*
+
+- Trigger *(and who the conversation routes to):*
+- Trigger:
 
 **The handoff sentence — exact wording:**
 
