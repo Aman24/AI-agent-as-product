@@ -288,6 +288,12 @@ Without explicit guardrails, Section 4 is wishful thinking. Write the policy. Se
 
 ---
 
+## Use it
+
+A fillable worksheet version of this framework lives here: **[Agent Product Spec — Template](./agent-product-spec-template.md)**. Clone it, fill it in with the PM, the engineering lead, and the named eval owner in the same room, and lock the answers before anyone leaves.
+
+---
+
 ## Origin
 
 This framework emerged from building and shipping multiple agents from spec → simulation → production on a modern agent infrastructure platform. The exact agents, prompts, tools, and platform aren't published; the spec structure above is the durable, reusable shape that survived the move from sandbox to live traffic. A retrospective on what got cut between spec and production is queued.
