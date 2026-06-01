@@ -8,6 +8,10 @@ If you read one thing here, read **[The Agent Product Spec](./frameworks/ai-agen
 
 When you're ready to apply it, clone the **[fillable template](./frameworks/agent-product-spec-template.md)** and fill it in with your PM, eng lead, and named eval owner in the same room.
 
+## Sibling repo
+
+[`claude-code-for-pm`](https://github.com/Aman24/claude-code-for-pm) — about *working with* an AI partner as a PM (the operating model). This repo is about *building* AI agents as products.
+
 ---
 
 **Contact:** [GitHub](https://github.com/Aman24) · [LinkedIn](https://www.linkedin.com/in/aman-naidu24)
