@@ -23,6 +23,8 @@ Short pieces, each arguing why one section of the spec is the one that decides w
 
 And one worked decision: **[Agent Platform vs Raw Foundation API](./decision-logs/agent-platform-vs-raw-api.md)** — a 5-question lens for the build-surface choice.
 
+And one retrospective: **[What I Cut Between Spec and Production](./retrospectives/spec-to-production-cuts.md)** — five honest cuts, and which ones came back to bite §1.
+
 ---
 
 **Contact:** [GitHub](https://github.com/Aman24) · [LinkedIn](https://www.linkedin.com/in/aman-naidu24)
